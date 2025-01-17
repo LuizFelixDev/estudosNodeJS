@@ -2,11 +2,11 @@ const http = require('http');
 const porta = 3000;
 const host = '127.0.0.1';
 
-const servidor = http.createServer((req, resp)=> {
+const servidor = http.createServer((req, resp)=> { // Criando servidor
     resp.writeHead(200, {'content-type':'text/html'});
-    if(req.url =='/'){
+    if(req.url =='/'){                             // Criando uma estrutura d decisão
         resp.write('<h1>Seja Bem-vindo</h1>');
-    }else if(req.url == '/canal'){
+    }else if(req.url == '/canal'){                
         resp.write('<h1>CFB cursos</h1>')
     }if(req.url=='/curso'){
         resp.write('<h1>Curso de Node</h1>')
@@ -15,3 +15,4 @@ const servidor = http.createServer((req, resp)=> {
 })
 
 servidor.listen(porta,host,()=>{console.log('Servidor rodando')});
+
