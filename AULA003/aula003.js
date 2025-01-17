@@ -4,7 +4,7 @@ const host = '127.0.0.1';
 
 const servidor = http.createServer((req, resp)=> { // Criando servidor
     resp.writeHead(200, {'content-type':'text/html'});
-    if(req.url =='/'){                             // Criando uma estrutura d decisão
+    if(req.url =='/'){
         resp.write('<h1>Seja Bem-vindo</h1>');
     }else if(req.url == '/canal'){                
         resp.write('<h1>CFB cursos</h1>')
