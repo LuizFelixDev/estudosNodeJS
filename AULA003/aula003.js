@@ -7,9 +7,11 @@ const servidor = http.createServer((req, resp)=> { // Criando servidor
     if(req.url =='/'){
         resp.write('<h1>Seja Bem-vindo</h1>');
     }else if(req.url == '/canal'){                
-        resp.write('<h1>CFB cursos</h1>')
-    }if(req.url=='/curso'){
-        resp.write('<h1>Curso de Node</h1>')
+        resp.write('<h1>CFB cursos</h1>');
+    }else if(req.url=='/falar'){
+        resp.write('<h1>Quero ser perdoado por Deus</h1>');
+    }else if(req.url == '/curso'){
+        resp.write('<h1>Curso de node.js</h1>')
     }
     resp.end();
 })
